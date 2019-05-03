@@ -1,0 +1,39 @@
+//QUESTION: lines 5-10, the constructor is a function of the variable, "target planet" is a function of "space shuttle", same with the new syntax
+in lines 16-22. lines 28-31 model this basic new syntax approach. WHY is 36-38 about returning the same name as the constructor? Before,
+it was "zeus.targetPlane" returning "jupiter". Now it's "carrot.name", returning "carrot". What's the use and where's the consistency?
+
+//old way with constructor function first, then instantiate new class 
+  
+var SpaceShuttle = function(targetPlanet){
+  this.targetPlanet = targetPlanet
+}
+
+var zeus = new SpaceShuttle('Jupiter');
+
+console.log(zeus.targetPlanet);
+
+// new way with class syntax 
+
+class SpaceShuttle {
+  constructor(targetPlanet){
+    this.targetPlanet = targetPlanet;
+  } 
+}
+
+var zeus = new SpaceShuttle('Jupiter');
+
+console.log(zeus.targetPlanet);
+
+  // so here's how it works
+
+function makeClass() {
+  class Vegetable {
+    constructor(name){
+      this.name = name;
+    }
+  }
+  return Vegetable
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable ('carrot');
+console.log(carrot.name);
