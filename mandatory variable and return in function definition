@@ -1,0 +1,7 @@
+/* Question: when you have a function that calls for a procedure, you pretty much HAVE TO define a variable for the procedure operations 
+on the parameters(operands?), as well as what to return, right? UNLESS it's an already defined function such as document.querySelector.*/
+
+function multiply(num1,num2) {
+  var result = num1 * num2;
+  return result;
+}
