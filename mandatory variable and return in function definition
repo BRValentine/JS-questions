@@ -5,3 +5,10 @@ function multiply(num1,num2) {
   var result = num1 * num2;
   return result;
 }
+
+//Next question: in
+document.querySelector('html').onclick = function() {
+    alert('Ouch! Stop poking me!');
+}
+/*the 'alert' function doesn't need to be 'document.alert' because of lexical scoping, right? In other words, the alert is in the body of the 
+'document.querySelector' function, so no need to keep specifiying the domain as 'document'. */
